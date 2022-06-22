@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    overflow-x: hidden;
+
+}
+
+/* page connexion */
+
+input, button{
+    border: solid #fff 2px;
+    background-color: rgb(39, 39, 39);
+}
+
+input:focus {
+    outline: none;
+}
+
+div.main {
+    animation: fadein 2.5s;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 30%;
+    bottom: 50%;
+}
+
+
+div.main form {
+    display: grid;
+    justify-content: center;
+}
+
+form input {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+form button {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: rgb(77, 77, 77);
+    transition: 0.3s;
+}
+
+h2#titre {
+    user-select: none;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: white;
+}
+
+div#about {
+    animation: fadein 2.5s;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+div#about p {
+    margin-bottom: 30px;
+    color: rgb(129, 129, 129);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* page data */
+
+div h4 {
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+h2#data {
+    display: none;
+}
+
+h3#grd-titre {
+    animation: fadein 1.5s;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+div.vroum {
+    width: 600px;
+    width: 100vw;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.moyenne-g {
+    width: 600px;
+    height: 200px;
+    margin: 50px;
+    margin-bottom: 150px;
+}
+
+h3#la-moyenne {
+    color: white;
+    font-size: 25px;
+    font-family: 'Roboto';
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+h3#la-moyenne-classe {
+    color: white;
+    font-size: 12px;
+    font-family: 'Roboto';
+    text-align: right;
+}
+
+div#page {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#grille-principale {
+    column-gap: 3vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+div#grille-principale h4 {
+    animation: fadein 1.5s;
+    color: white;
+}
+
+div.cellule {
+    width: 500px;
+    height: 300px
+}
+
+
+
+/* animation */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* partie reponsive */
+
+/* petit écran */
+@media screen and (max-width: 1600px) {
+
+    div#grille-principale {
+        grid-template-columns: auto auto;
+        row-gap: 5vh;
+    }
+
+    div.cellule {
+        width: 45vw;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+
+    div#page{
+        padding-top: 20vh;
+    }
+
+    div#grille-principale {
+        grid-template-columns: auto;
+        row-gap: 30px;
+    }
+
+    div.vroum {
+        display: grid;
+        /* margin-bottom: 100px; */
+        max-height: 400px;
+        height: 60vh;
+        width: 100vw;
+        margin: 0;
+        justify-content: center;
+    }
+
+    div.moyenne-g {
+        /* width: 80vw; */
+        /* height: 640px; */
+        margin: 0;
+    }
+
+    h3#la-moyenne {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 1vh;
+    }
+
+    h3#la-moyenne-classe {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    div.cellule {
+        width: 80vw;
+    }
+}
+
+
+button#dark-mode {
+    color: white;
+    border: solid #fff 1px;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    position: fixed;
+    right: 1.5%;
+    bottom: 1.5%;
+    animation: fadein 1.5s;
+}
+
+i {
+    background-color: transparent;
+}
+
+button#dark-mode {
+    background-color: rgb(39, 39, 39);
+}
+
+button#dark-mode:hover {
+    background-color: rgb(66, 66, 66);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 450px) {
+
+    h2#titre {
+        font-size: 24px;
+    }
+
+    div#about p {
+        font-size: 13px;
+    }
+
+
+    h3#grd-titre {
+        margin-top: 25px;
+        font-size: 22px;
+    }
+
+    div.vroum {
+        display: grid;
+        height: 350px;
+        width: 100vw;
+        margin: 0;
+        justify-content: center;
+    }
+
+    div.moyenne-g {
+        width: 90vw;
+        height: 60vh;
+        margin: 0;
+    }
+
+    h3#la-moyenne {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 1vh;
+    }
+
+    h3#la-moyenne-classe {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    div#grille-principale {
+        justify-items: center;
+        align-items: center;
+        width: 100vw;
+        grid-template-columns: auto;
+    }
+
+    div.cellule {
+        width: 80vw;
+        height: 40vh;
+    }
+}
+
+/* theme clair */
+
+body{
+    transition: 1s;
+}
+
+h3{
+    transition: 1s;
+}
+
+h4{
+    transition: 1s;
+}
+
+
+body.light {
+    transition: 1s;
+    background-color: white;
+}
+
+h3.light{
+    transition: 1s;
+    color: black !important;
+}
+
+h4.light{
+    transition: 1s;
+    color: black !important;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PronoteDataAnalytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="js/chart.js"></script>
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <!-- stockage de la data envoyée par le serveur -->
+    <h2 id="data">
+        <%= JSON.stringify(data) %>
+    </h2>
+
+    <h3 id="grd-titre">
+        Profil de <%= nom_prenom %>
+    </h3>
+
+    <div class="vroum">
+        <div class="jesuisuneformule1">
+            <h3 id="la-moyenne">Moyenne Générale de l'élève<br><%= moyenne_g_eleve %>/20</h3>
+            <h3 id="la-moyenne-classe">Moyenne Générale de la classe<br> <%= moyenne_g_classe %>/20</h3>
+        </div>
+        <div class="moyenne-g">
+            <canvas id="moyenne-g"></canvas>
+        </div>    
+    </div>
+    <div id="page">
+        <div id="grille-principale">
+        </div>
+    </div>
+
+    <button id="dark-mode" class="dark" onclick="toogledarkmode()"><i class="bi bi-moon-stars-fill"></i></button>
+
+</body>
+
+</html>
