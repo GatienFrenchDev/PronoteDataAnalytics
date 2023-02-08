@@ -1,5 +1,8 @@
 # PronoteDataAnalytics
 
+# ⚠️ Cette version ne marche plus : allez plutot sur le repo de l'extension servant le même principe :
+https://github.com/GatienFrenchDev/pronote-extension
+
 PronoteDataAnalytics est une application web qui permet aux élèves de Descartes de pouvoir visualiser leurs notes sur des graphiques.
 
 Codé en Javascript à l'aide de node.js.
